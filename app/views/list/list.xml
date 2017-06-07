@@ -1,0 +1,26 @@
+<Page class="page" xmlns="http://schemas.nativescript.org/tns.xsd" loaded="loaded">
+    <Page.actionBar>
+        <ActionBar class="action-bar">
+            <StackLayout class="action-bar-title">
+                <Label text="Articulos"></Label>
+            </StackLayout>
+            <ActionItem id="share" class="action-item" tap="share" ios.systemIcon="9" ios.position="left" android.systemIcon="ic_menu_share" android.position="actionBar"/>
+        </ActionBar>
+    </Page.actionBar>
+
+    <GridLayout rows="*,auto">
+        <ListView items="{{ articulos }}" id="articulosList" row="0" class="list-group">
+            <ListView.itemTemplate>
+                <GridLayout columns="1*, 2*, 1*" longpress="more" class="list-group-item">
+                    <Label text="{{ Nombre }}" col="0" class="list-group-item-text"/>
+                    <Label text="{{ Descripcion }}" col="1" class="list-group-item-text"/>
+                    <Label text="{{ Precio }}" col="2" class="list-group-item-text"/>
+                </GridLayout>
+            </ListView.itemTemplate>
+        </ListView>
+
+        <SearchBar hint="Search Here" id="search" submit="submit" clear="reload" row="1"></SearchBar>
+
+        <Button text="+" class="float-btn" tap="moveToCreateItem"></Button>
+    </GridLayout>
+</Page>

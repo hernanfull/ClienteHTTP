@@ -1,0 +1,21 @@
+<Page class="page" loaded="loaded" xmlns="http://schemas.nativescript.org/tns.xsd" xmlns:dd="nativescript-drop-down">
+    <Page.actionBar>
+        <ActionBar class="action-bar">
+            <StackLayout class="action-bar-title">
+                <Label text="Nuevo Articulo"></Label>
+            </StackLayout>
+        </ActionBar>
+    </Page.actionBar>
+
+    <ScrollView>
+        <StackLayout>
+            <TextField id="Nombre" hint="Nombre" class="input"/>
+            <TextField id="Precio" hint="Precio" class="input"/>
+            <TextField id="Descripcion" hint="Descripcion" class="input"/>
+
+            <dd:DropDown height="50" items="{{ item }}" id="Rubro" hint="Selecciona el rubro" class="dropdown input" opened="dropDownOpened"/>
+
+            <Button text="ACEPTAR" tap="submit" class="btn"/>
+        </StackLayout>
+    </ScrollView>
+</Page>

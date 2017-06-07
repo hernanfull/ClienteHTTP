@@ -1,0 +1,25 @@
+/*ListView {
+    margin: 5;
+}
+
+Label {
+    margin: 10;
+    horizontal-align: left;
+    vertical-align: center;
+}*/
+
+.action-bar-title{
+    horizontal-align: left;
+}
+
+.float-btn {
+    color: #fff;
+    font-size: 25;
+    border-radius: 28;
+    height: 56;
+    width: 56;
+    margin: 15;
+    background-color: #30bcff;
+    horizontal-align: right;
+    vertical-align: bottom;
+}
